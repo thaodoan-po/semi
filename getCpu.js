@@ -17,10 +17,10 @@ module.exports = function getCpu(ref) {
         cpu = cpu.toFixed(2);
         if (cpu > 70) {
             if (followCpu() == 1) {
-                ref.doc('warning').add({
-                    timeStart: time[0]
+                ref.doc('cpu/warning/' + cpu + '').set({
+                    time: time[0]
                 })
-                sendEmail();
+                sendEmail(cpu, time);
             }
         }
         //set data to firestore

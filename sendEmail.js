@@ -1,4 +1,4 @@
-module.exports = function sendEmail() {
+module.exports = function sendEmail(cpu, time) {
     const nodemailer = require('nodemailer');
     require('dotenv').config()
 
@@ -19,8 +19,9 @@ module.exports = function sendEmail() {
     var mailOptions = {
         from: 'Semi',
         to: 'doanthao150399999@gmail.com',
-        subject: 'Warning CPU',
-        text: 'CPU is too high'
+        subject: '[Semi] Warning CPU',
+        text: 'Hi doanthao150399999"gmail.com',
+        html: '<h3> CPU usage is ' + cpu + ' at ' + time + '</h3>'
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
