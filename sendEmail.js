@@ -20,8 +20,9 @@ module.exports = function sendEmail(cpu, time) {
         from: 'Semi',
         to: 'doanthao150399999@gmail.com',
         subject: '[Semi] Warning CPU',
-        text: 'Hi doanthao150399999"gmail.com',
-        html: '<h3> CPU usage is ' + cpu + ' at ' + time + '</h3>'
+        html:   '<p>Hi, <b>doanthao150399999@gmail.com</b> </p>' + 
+                '<h3> CPU usage is ' + cpu + ' at ' + time + '</h3>' + 
+                '<p>Plase check our website or your server to follow CPU usage.</p>'
     };
 
     transporter.sendMail(mailOptions, function (error, info) {

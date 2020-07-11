@@ -16,12 +16,7 @@ module.exports = function getCpu(ref) {
         //rounding
         cpu = cpu.toFixed(2);
         if (cpu > 70) {
-            if (followCpu() == 1) {
-                ref.doc('cpu/warning/' + cpu + '').set({
-                    time: time[0]
-                })
-                sendEmail(cpu, time);
-            }
+            followCpu(ref);
         }
         //set data to firestore
         ref.doc('cpu').set({
