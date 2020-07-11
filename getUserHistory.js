@@ -1,5 +1,5 @@
 var { exec } = require('child_process');
-module.exports = function getDisk(ref) {
+module.exports = function getUserHistory(ref) {
     //execute cmd to get information
     exec('last', (err, stdout, stderr) => {
         console.log(stderr);
