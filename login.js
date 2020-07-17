@@ -47,7 +47,7 @@ if (readline.keyInYN('Do you have account?')) {
         console.log(errorCode);
         console.log(errorMessage);
     });
-    var  = readline.question("CPU warning : ");
+    var cpu = readline.question("CPU warning : ");
     const id = email.split('@')[0];
     module.exports.id = id;
 }
