@@ -26,7 +26,7 @@ let procRef = ref.child('procRunning')
 getNetwork(sref);
 setInterval(function () {
     getCpu(sref)
-}, 3000);
+}, 5000);
 
 setInterval(function () {
     getPort(portRef);
